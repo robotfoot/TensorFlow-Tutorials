@@ -2,9 +2,15 @@
 
 import tensorflow as tf
 import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn import datasets
 
-trX = np.linspace(-1, 1, 101)
-trY = 2 * trX + np.random.randn(*trX.shape) * 0.33 # create a y value which is approximately linear but with some random noise
+#trX = np.linspace(-1, 1, 101)
+iris = datasets.load_iris()
+trX = iris.data[:, :1]  # we only take the first feature.
+trY = iris.target
+#trY = 2 * trX + np.random.randn(*trX.shape) * 0.33 # create a y value which is approximately linear but with some random noise
 
 X = tf.placeholder("float") # create symbolic variables
 Y = tf.placeholder("float")

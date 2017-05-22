@@ -70,3 +70,4 @@ logs/
 
 #ipython notebook
 .ipynb_checkpoints/
+*.swp
