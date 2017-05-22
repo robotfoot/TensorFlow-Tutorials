@@ -8,7 +8,7 @@ from sklearn import datasets
 
 #trX = np.linspace(-1, 1, 101)
 iris = datasets.load_iris()
-trX = iris.data[:, :1]  # we only take the first feature.
+trX = iris.data[:, :3]  # we only take the first feature.
 trY = iris.target
 #trY = 2 * trX + np.random.randn(*trX.shape) * 0.33 # create a y value which is approximately linear but with some random noise
 
